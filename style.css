@@ -856,3 +856,24 @@ h2 {
     }
 
 }
+
+
+/* =========================
+   IDENTIFICAÇÃO DOS ESPAÇOS
+========================= */
+
+.comparacao-espaco h4 {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin: 45px 0 18px;
+
+    padding-left: 15px;
+
+    border-left: 3px solid #d71920;
+}
