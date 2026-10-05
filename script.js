@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const capitulos = [
         "capitulos/capitulo-01.html",
         "capitulos/capitulo-02.html"
+        "capitulos/capitulo-03.html"
     ];
 
     capitulos.forEach(function (arquivo) {
