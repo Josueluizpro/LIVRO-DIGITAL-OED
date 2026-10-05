@@ -404,3 +404,130 @@ h2 {
         font-size: 8px;
     }
 }
+
+/* =========================
+   CAPÍTULOS DO LIVRO
+========================= */
+
+.capitulo {
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #181818 100%
+        );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    position: relative;
+}
+
+
+/* CABEÇALHO DO CAPÍTULO */
+
+.capitulo-cabecalho {
+    max-width: 900px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.numero-capitulo {
+    display: inline-block;
+
+    color: #d71920;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.capitulo-cabecalho h2 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+.data-capitulo {
+    color: #777777;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* CONTEÚDO */
+
+.capitulo-conteudo {
+    max-width: 780px;
+
+    margin: 0 auto;
+}
+
+.capitulo-conteudo p {
+    color: #c7c7c7;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 28px;
+}
+
+.capitulo-conteudo .destaque {
+    color: #ffffff;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    border-left: 4px solid #d71920;
+
+    padding-left: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .capitulo {
+        padding: 90px 7%;
+    }
+
+    .capitulo-cabecalho {
+        margin-bottom: 50px;
+    }
+
+    .capitulo-conteudo p {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+    .capitulo-conteudo .destaque {
+        font-size: 21px;
+
+        padding-left: 18px;
+    }
+}
