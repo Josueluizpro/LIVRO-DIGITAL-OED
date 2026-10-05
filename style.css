@@ -1,1 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #ffffff;
+}
+
+/* =========================
+   CAPA
+========================= */
+
+.capa {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(215, 25, 32, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #090909,
+            #161616 55%,
+            #0d0d0d
+        );
+}
+
+/* Linha vermelha superior */
+
+.linha-vermelha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #d71920;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    position: absolute;
+    top: 45px;
+    left: 7%;
+    right: 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca-sesi {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.unidade {
+    color: #cccccc;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.capa-conteudo {
+    position: absolute;
+
+    left: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    max-width: 720px;
+
+    z-index: 5;
+}
+
+.pre-titulo {
+    color: #d71920;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(48px, 7vw, 92px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+}
+
+h1 span {
+    color: #d71920;
+}
+
+.linha-titulo {
+    width: 90px;
+    height: 4px;
+
+    background: #d71920;
+
+    margin: 30px 0 22px;
+}
+
+h2 {
+    font-size: clamp(18px, 2vw, 25px);
+
+    font-weight: 400;
+
+    color: #dddddd;
+
+    margin-bottom: 25px;
+}
+
+.descricao {
+    max-width: 600px;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   AUTOR
+========================= */
+
+.autor {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.autor strong {
+    font-size: 19px;
+}
+
+.autor span {
+    color: #888888;
+
+    font-size: 14px;
+}
+
+/* =========================
+   ELEMENTOS TECNOLÓGICOS
+========================= */
+
+.elementos-tecnologia {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+/* Círculos */
+
+.circulo {
+    position: absolute;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.circulo-1 {
+    width: 550px;
+    height: 550px;
+
+    right: -170px;
+    top: 18%;
+}
+
+.circulo-2 {
+    width: 380px;
+    height: 380px;
+
+    right: -80px;
+    top: 28%;
+
+    border-color: rgba(215, 25, 32, 0.2);
+}
+
+.circulo-3 {
+    width: 700px;
+    height: 700px;
+
+    right: -250px;
+    top: 5%;
+
+    border-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Código */
+
+.codigo {
+    position: absolute;
+
+    right: 15%;
+    top: 30%;
+
+    font-size: 70px;
+
+    color: rgba(215, 25, 32, 0.18);
+
+    font-weight: bold;
+
+    transform: rotate(-12deg);
+}
+
+/* Ícone Maker */
+
+.maker {
+    position: absolute;
+
+    right: 13%;
+    bottom: 24%;
+
+    font-size: 65px;
+
+    color: rgba(255, 255, 255, 0.08);
+
+    animation: girar 15s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   INDICAÇÃO DE ROLAGEM
+========================= */
+
+.rolar {
+    position: absolute;
+
+    bottom: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+.seta {
+    color: #d71920;
+
+    font-size: 30px;
+
+    animation: descer 1.5s infinite;
+}
+
+@keyframes descer {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape-capa {
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 7%;
+    right: 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        top: 30px;
+        left: 6%;
+        right: 6%;
+    }
+
+    .marca-sesi {
+        font-size: 25px;
+    }
+
+    .unidade {
+        font-size: 12px;
+    }
+
+    .capa-conteudo {
+        left: 7%;
+        right: 7%;
+        max-width: none;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .circulo-1 {
+        width: 350px;
+        height: 350px;
+
+        right: -180px;
+    }
+
+    .circulo-2 {
+        width: 250px;
+        height: 250px;
+
+        right: -100px;
+    }
+
+    .circulo-3 {
+        width: 450px;
+        height: 450px;
+
+        right: -220px;
+    }
+
+    .codigo {
+        right: 8%;
+        top: 25%;
+        font-size: 45px;
+    }
+
+    .maker {
+        right: 8%;
+        bottom: 25%;
+        font-size: 45px;
+    }
+
+    .rolar {
+        bottom: 45px;
+        font-size: 8px;
+    }
+}
