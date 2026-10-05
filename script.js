@@ -1,37 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
 
     const livro = document.getElementById("livro-conteudo");
 
     const capitulos = [
         "capitulos/capitulo-01.html",
-        "capitulos/capitulo-02.html"
+        "capitulos/capitulo-02.html",
         "capitulos/capitulo-03.html"
     ];
 
-    capitulos.forEach(function (arquivo) {
+    for (const arquivo of capitulos) {
 
-        fetch(arquivo)
-            .then(response => {
+        try {
 
-                if (!response.ok) {
-                    throw new Error("Não foi possível carregar: " + arquivo);
-                }
+            const response = await fetch(arquivo);
 
-                return response.text();
-            })
+            if (!response.ok) {
+                throw new Error(
+                    "Não foi possível carregar: " + arquivo
+                );
+            }
 
-            .then(conteudo => {
+            const conteudo = await response.text();
 
-                livro.insertAdjacentHTML("beforeend", conteudo);
+            livro.insertAdjacentHTML(
+                "beforeend",
+                conteudo
+            );
 
-            })
+        } catch (erro) {
 
-            .catch(erro => {
+            console.error(erro);
 
-                console.error(erro);
+        }
 
-            });
-
-    });
+    }
 
 });
