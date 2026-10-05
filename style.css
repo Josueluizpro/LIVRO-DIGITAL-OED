@@ -531,3 +531,101 @@ h2 {
         padding-left: 18px;
     }
 }
+
+/* =========================
+   DESTAQUE INTERNO DO CAPÍTULO
+========================= */
+
+.capitulo-destaque {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin: 60px 0;
+    padding: 30px;
+
+    border-top: 1px solid rgba(215, 25, 32, 0.35);
+    border-bottom: 1px solid rgba(215, 25, 32, 0.35);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.capitulo-destaque > span {
+    font-size: 55px;
+    font-weight: 800;
+
+    color: #d71920;
+
+    line-height: 1;
+}
+
+.capitulo-destaque strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.capitulo-destaque p {
+    margin: 0;
+
+    color: #999999;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* FINAL DO CAPÍTULO */
+
+.fim-capitulo {
+    margin-top: 90px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    color: #666666;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+}
+
+.fim-capitulo div {
+    margin-top: 15px;
+
+    color: #d71920;
+
+    font-size: 28px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .capitulo-destaque {
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .capitulo-destaque > span {
+        font-size: 42px;
+    }
+
+    .capitulo-destaque strong {
+        font-size: 18px;
+    }
+
+    .capitulo-destaque p {
+        font-size: 14px;
+    }
+
+}
