@@ -880,15 +880,14 @@ h2 {
 
 
 
-
 /* =========================
-   EVIDÊNCIAS DO CAPÍTULO
+   EVIDÊNCIAS DOS CAPÍTULOS
 ========================= */
 
 .evidencia {
     display: grid;
 
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 55px;
 
@@ -900,12 +899,35 @@ h2 {
 }
 
 
-.evidencia-invertida {
-    grid-template-columns: 0.85fr 1.15fr;
+/* FOTO À ESQUERDA / TEXTO À DIREITA */
+
+.evidencia .evidencia-imagem {
+    order: 1;
+}
+
+.evidencia .evidencia-texto {
+    order: 2;
 }
 
 
-/* IMAGEM */
+/* TEXTO À ESQUERDA / FOTO À DIREITA */
+
+.evidencia-invertida .evidencia-texto {
+    order: 1;
+}
+
+.evidencia-invertida .evidencia-imagem {
+    order: 2;
+}
+
+
+/* =========================
+   TAMANHO PADRÃO DAS FOTOS
+========================= */
+
+.evidencia-imagem {
+    width: 100%;
+}
 
 .evidencia-imagem img {
     display: block;
@@ -923,7 +945,9 @@ h2 {
 }
 
 
-/* TEXTO */
+/* =========================
+   TEXTO
+========================= */
 
 .evidencia-texto span {
     color: #d71920;
@@ -957,7 +981,7 @@ h2 {
 
 
 /* =========================
-   MARCAÇÕES ENTRE AS FOTOS
+   MARCAÇÕES
 ========================= */
 
 .marcacao {
@@ -1017,19 +1041,25 @@ h2 {
     }
 
 
+    .evidencia .evidencia-imagem,
     .evidencia-invertida .evidencia-imagem {
+
         order: 1;
+
     }
 
 
+    .evidencia .evidencia-texto,
     .evidencia-invertida .evidencia-texto {
+
         order: 2;
+
     }
 
 
     .evidencia-imagem img {
 
-        height: auto;
+        height: 380px;
 
     }
 
