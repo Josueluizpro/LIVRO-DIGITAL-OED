@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         "capitulos/capitulo-02.html",
         "capitulos/capitulo-03.html",
          "capitulos/capitulo-04.html",
-         "capitulos/capitulo-05.html"
+         "capitulos/capitulo-05.html",
+         "capitulos/capitulo-06.html"
     ];
 
     for (const arquivo of capitulos) {
