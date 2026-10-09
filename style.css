@@ -1087,3 +1087,29 @@ h2 {
     }
 
 }
+
+
+
+/* =========================
+   AJUSTES DAS FOTOS — CAPÍTULO 08
+   Preserva a imagem inteira
+========================= */
+
+.evidencia-imagem img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 700px) {
+    .evidencia-imagem img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+    }
+}
+
